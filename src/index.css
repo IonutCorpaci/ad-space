@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Montserrat;
+    font-display: swap;
+    src: url(assets/fonts/Montserrat-VariableFont_wght.woff2) format("woff2");
+    font-weight: 300 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: icons;
+    font-display: swap;
+    src: url(assets/fonts/icons.woff) format("woff");
+    font-weight: 300 900;
+    font-style: normal
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-user:before {
+    content: "\e900";
+}
+._icon-close:before {
+    content: "\e903";
+}
+._icon-home:before {
+    content: "\e901";
+}
+._icon-bubbles:before {
+    content: "\e96d";
+}
+._icon-search:before {
+    content: "\e986";
+}
+._icon-menu:before {
+    content: "\e9bd";
+}
+._icon-star-empty:before {
+    content: "\e9d7";
+}
+._icon-star-full:before {
+    content: "\e9d9";
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}

@@ -1,0 +1,245 @@
+{
+  "ads": [
+    {
+      "id": "1",
+      "title": "iPhone 13",
+      "price": 650,
+      "category": "Электроника",
+      "city": "Chisinau",
+      "userId": 2,
+      "createdAt": "2025-10-10T12:00:00Z",
+      "images": []
+    },
+    {
+      "id": "2",
+      "title": "Квартира 2-комнатная",
+      "price": 35000,
+      "category": "Недвижимость",
+      "city": "Chisinau",
+      "userId": 3,
+      "createdAt": "2025-09-20T08:00:00Z",
+      "images": []
+    },
+    {
+      "id": "3",
+      "title": "Volkswagen Golf VI",
+      "price": 7500,
+      "category": "Транспорт",
+      "city": "Chisinau",
+      "userId": 3,
+      "createdAt": "2025-09-20T08:00:00Z",
+      "images": []
+    },
+    {
+      "id": "3d39",
+      "title": "Audi RS8",
+      "price": 2000,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1763841666/mqv4nouds8tu8rexgafu.jpg",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1763841669/h5shqqsrnjbbxekac3ur.jpg"
+      ]
+    },
+    {
+      "id": "4071",
+      "title": "Ipad 16",
+      "price": "400",
+      "category": "Недвижимость",
+      "city": "Бричаны",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1763843347/igc2pwx3pxrjfdp5qqs3.png"
+      ]
+    },
+    {
+      "id": "2111",
+      "title": "Table",
+      "price": "100",
+      "category": "Недвижимость",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1763853204/nyk0dq0sdc4td1ddgyjo.jpg",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1763853205/rfzcm3xqtjzsybrkr4fe.png"
+      ]
+    },
+    {
+      "id": "1fb3",
+      "title": "Phone",
+      "price": "50",
+      "category": "Недвижимость",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1763853502/c23goti8bde64umfjsvt.png"
+      ]
+    },
+    {
+      "id": "017d",
+      "title": "Услуги вёрстки",
+      "description": "Сделаю все качественно.",
+      "price": "800",
+      "category": "Электроника",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1765362005/zzfwhrrsprx2runfwn9c.png"
+      ]
+    },
+    {
+      "id": "5ede",
+      "title": "Volkswagen Arteon an. 2019",
+      "description": "Se vinde Volkswagen Arteon sedan alb, echipat cu motor diesel și tracțiune față. Stare excelentă, kilometraj redus. O alegere perfectă pentru deplasări confortabile și economice în Chișinău. Nu ratați ocazia de a cumpăra o mașină fiabilă la un preț avantajos!\nRecent importatata.\nSe accepta schimb pe auto sau imobil\nAccpetam orice testare /verificare",
+      "price": "22100",
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1765464981/xbr47lfpjaxnanvrutgo.jpg",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1765464982/nw3ihtappeayt7cpoyqr.jpg",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1765464983/c1t0ezhvfo7lym5oamzp.jpg",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1765464984/vdvyocp2ej0bktjesqyk.jpg",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1765464985/ss0pk14m3y9bddanirha.jpg"
+      ]
+    },
+    {
+      "id": "5cf4",
+      "title": "Code",
+      "description": "Code",
+      "price": "2000",
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1766834470/yu8sxvpiboarhhzyu2ti.png"
+      ]
+    },
+    {
+      "id": "4777",
+      "title": "VibeCoding",
+      "description": "Vibe Coding",
+      "price": 12,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1766842266/ansg3zrujanmaetjlbno.png",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1766842267/msyjrkcz0ablzmmwuhtd.png",
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1766842269/sfyvnsvsgdhbad72mzxc.png"
+      ]
+    },
+    {
+      "id": "16e7",
+      "title": "d",
+      "description": "fd",
+      "price": 2000,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1766858455/gfbviccc4zvx2ikejonc.jpg"
+      ]
+    },
+    {
+      "id": "20d1",
+      "title": "Ршу",
+      "description": "аываываываываываываываываываываываывааываываываываываываы",
+      "price": 2000,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "da8d",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1766860737/ofcnbzvtrgo4kt1kst7y.jpg"
+      ]
+    },
+    {
+      "id": "5619",
+      "title": "Игровой комплекс",
+      "description": "НЕТ! АВОЫЛАДОДВЫЛОАДЛЫВОАЛВЫОПДЛЫОВ",
+      "price": 1220,
+      "category": "Спорт и отдых",
+      "city": "Бричаны",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771246543/gyvrnsvfr94imfdf1e42.webp"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Транспорт",
+      "id": "ff55"
+    },
+    {
+      "name": "Электроника",
+      "id": "62ac"
+    },
+    {
+      "name": "Недвижимость",
+      "id": "f25c"
+    },
+    {
+      "name": "Одежда",
+      "id": "ee59"
+    },
+    {
+      "name": "Спорт и отдых",
+      "id": "0e43"
+    }
+  ],
+  "users": [
+    {
+      "id": "da8d",
+      "name": "Jony",
+      "email": "test@test.com",
+      "password": "1111",
+      "role": "user",
+      "city": "",
+      "favorites": [
+        "1",
+        "2",
+        "5ede",
+        "3d39"
+      ]
+    },
+    {
+      "id": "19c5",
+      "name": "Ionut",
+      "email": "ionut@admin.com",
+      "password": "0000",
+      "role": "user",
+      "city": "",
+      "favorites": [
+        "1",
+        "1fb3",
+        "2",
+        "4071",
+        "3"
+      ]
+    },
+    {
+      "id": "5ec5",
+      "name": "Jony",
+      "email": "jony@jony.com",
+      "password": "Admin123",
+      "role": "user",
+      "city": "",
+      "favorites": [
+        "3",
+        "3d39",
+        "5ede",
+        "5cf4",
+        "2"
+      ]
+    }
+  ],
+  "favorites": [
+    {
+      "id": "1",
+      "userId": 2,
+      "adId": 2
+    }
+  ]
+}
