@@ -18,6 +18,7 @@ const Header = () => {
                 <ul className="menu hidden items-center gap-6 md:flex">
                     <li className="bg-green-600 text-white px-3 py-2 rounded-3xl"><Link to="/create-ad">+ Подать обьявления</Link></li>
                     <li className={user ? 'hover:text-blue-800 delay-75' : 'hidden'}><Link to="/favorites"><span className="_icon-star-empty"></span> Избранные</Link></li>
+                    <li className={user ? 'hover:text-blue-800 delay-75' : 'hidden'}><Link to="/my-ads">Мои обьявления</Link></li>
                     <li className={user ? 'hover:text-blue-800 delay-75' : 'hidden'}><Link to="/profile" className="flex items-center gap-1"><span className="_icon-user text-4xl"></span></Link></li>
                     <li className={user ? 'hidden' : 'hover:text-blue-800 delay-75'}><Link to='/login'>Войти</Link></li>
                 </ul>

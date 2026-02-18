@@ -9,10 +9,6 @@ const RegisterPage = () => {
 
     const { registerUser } = useContext(AuthContext);
     const navigate = useNavigate();
-
-    // const [name, setName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const {register, formState: {errors}, handleSubmit} = useForm({
         resolver: zodResolver(registerSchema),
@@ -24,7 +20,6 @@ const RegisterPage = () => {
     })
 
     const handleSubmitForm = async (data) => {
-        // e.preventDefault();
         try {
             await registerUser(data.name, data.email, data.password);
             navigate("/");
@@ -42,8 +37,6 @@ const RegisterPage = () => {
                     <input
                         type="text"
                         placeholder="Имя"
-                        // value={name}
-                        // onChange={e => setName(e.target.value)}
                         className="w-full border border-gray-300 rounded-md p-2 outline-none"
                         {...register("name")}
                     />
@@ -53,8 +46,6 @@ const RegisterPage = () => {
                     <input
                         type="email"
                         placeholder="Email"
-                        // value={email}
-                        // onChange={e => setEmail(e.target.value)}
                         className="w-full border border-gray-300 rounded-md p-2 outline-none"
                         {...register("email")}
                     />
@@ -64,8 +55,6 @@ const RegisterPage = () => {
                     <input
                         type="password"
                         placeholder="Пароль"
-                        // value={password}
-                        // onChange={e => setPassword(e.target.value)}
                         className="w-full border border-gray-300 rounded-md p-2 outline-none"
                         {...register("password")}
                     />

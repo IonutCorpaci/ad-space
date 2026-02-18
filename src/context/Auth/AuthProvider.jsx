@@ -6,7 +6,7 @@ import useServerRequest from "../../api/ServerRequest.jsx";
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const {getUser, changeFavorite} = useServerRequest();
+    const {getUser, changeFavorite, addAdToUser} = useServerRequest();
 
     useEffect(() => {
         const userObj = localStorage.getItem("user");
@@ -51,6 +51,7 @@ export const AuthProvider = ({ children }) => {
             password,
             role: "user",
             city: "",
+            ads: [],
             favorites: []
         });
 
@@ -80,9 +81,22 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const addUserAd = async (adId) => {
+        if (!user) return;
+
+        const updatedAds = [...(user.ads || []), adId];
+
+        try {
+            const res = await addAdToUser(user.id, {ads: updatedAds});
+            setUser(res);
+        } catch (err) {
+            console.log("Ошибка добавления объявления", err);
+        }
+    };
+
 
     return (
-        <AuthContext.Provider value={{ user, setUser, loading, login, registerUser, logout, toggleFavorite }}>
+        <AuthContext.Provider value={{ user, setUser, loading, login, registerUser, logout, toggleFavorite, addUserAd }}>
             {children}
         </AuthContext.Provider>
     );

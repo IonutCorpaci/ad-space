@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 const CreateAd = () => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(false);
-    const {user} = useContext(AuthContext);
+    const {user, addUserAd} = useContext(AuthContext);
     const {getAllCategories, createAd} = useServerRequest();
 
     const {
@@ -102,13 +102,22 @@ const CreateAd = () => {
                 images: uploadedUrls,
             };
 
-            await createAd(ad);
+            await createAd(ad, user);
             reset()
+
+            const adId = await createAd(ad);  // Создаем объявление, получаем ID
+            await addUserAd(adId);
+
+            navigate("/");
         } catch (error) {
-            console.error("Ошибка создания объявления:", error);
+            const message =
+                error.message ||
+                "Что-то пошло не так..";
+
+            toast.error(message);
+            console.error(error);
         } finally {
             setLoading(false);
-            navigate("/");
         }
     }
 

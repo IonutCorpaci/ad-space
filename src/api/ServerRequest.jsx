@@ -39,6 +39,14 @@ const useServerRequest = () => {
         return favoritesAds;
     }, [getAllAds]);
 
+    const getMyAds = useCallback(async (user) => {
+        const ads = await getAllAds();
+
+        const myAds = ads.filter(ad => user?.ads.includes(ad.id));
+
+        return myAds;
+    }, [getAllAds]);
+
     const getSearchAds = useCallback(async (query) => {
         const ads = await getAllAds();
 
@@ -52,13 +60,14 @@ const useServerRequest = () => {
         return res.data;
     }, [])
 
+    const addAdToUser = useCallback(async (id, data) => {
+        const res = await axios.patch(`${_apiBase}/users/${id}`, data);
+        return res.data;
+    },[])
+
     const createAd = useCallback(async (data) => {
-        await axios.post(`${_apiBase}/ads`, data);
-        // await fetch(`${_apiBase}/ads`, {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(data)
-        // });
+        const response = await axios.post(`${_apiBase}/ads`, data);
+        return response.data.id;  // Возвращаем только ID
     }, [])
 
 
@@ -72,6 +81,8 @@ const useServerRequest = () => {
         createAd,
         getAd,
         getSearchAds,
+        getMyAds,
+        addAdToUser,
     }
 
 }

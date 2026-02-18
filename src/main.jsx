@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './app/App.jsx'
-import {createBrowserRouter, redirect, RouterProvider} from "react-router";
+import {createBrowserRouter, RouterProvider} from "react-router";
 import Home from "./pages/Home.jsx";
 import CategoryAds from "./pages/CategoryAds.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
@@ -16,6 +16,8 @@ import {FavoritesProvider} from "./context/Favorites/FavoritesProvider.jsx";
 import Ad from "./pages/Ad.jsx";
 import AdErrorPage from "./pages/AdErrorPage.jsx";
 import requireAuth from "./utils/authGuard.js";
+import {createLoader} from "./utils/createLoader.js";
+import MyAdsPage from "./pages/MyAdsPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -44,53 +46,20 @@ const router = createBrowserRouter([
                 loader: requireAuth,
             },
             {
+                path: "my-ads",
+                element: <MyAdsPage/>,
+                loader: requireAuth,
+            },
+            {
                 path: "ads/:id",
                 element: <Ad/>,
-                loader: async ({ params }) => {
-                    try {
-                        const res = await fetch(`http://localhost:3000/ads/${params.id}`);
-                        
-                        if (!res.ok) {
-                            if (res.status === 404) {
-                                throw new Response("Объявление не найдено", { status: 404 });
-                            }
-                            throw new Response("Ошибка при загрузке объявления", { status: res.status });
-                        }
-                        
-                        const data = await res.json();
-                        return data;
-                    } catch (error) {
-                        if (error instanceof Response) {
-                            throw error;
-                        }
-                        throw new Response("Не удалось загрузить объявление. Проверьте подключение к интернету.", { status: 500 });
-                    }
-                },
+                loader: createLoader(({ id }) => `http://localhost:3000/ads/${id}`),
                 errorElement: <AdErrorPage/>,
             },
             {
                 path: "categories/:id",
                 element: <CategoryAds />,
-                loader: async ({ params }) => {
-                    try {
-                        const res = await fetch(`http://localhost:3000/categories/${params.id}`);
-
-                        if (!res.ok) {
-                            if (res.status === 404) {
-                                throw new Response("Объявление не найдено", { status: 404 });
-                            }
-                            throw new Response("Ошибка при загрузке объявления", { status: res.status });
-                        }
-
-                        const data = await res.json();
-                        return data;
-                    } catch (error) {
-                        if (error instanceof Response) {
-                            throw error;
-                        }
-                        throw new Response("Не удалось загрузить объявление. Проверьте подключение к интернету.", { status: 500 });
-                    }
-                }
+                loader: createLoader(({ id }) => `http://localhost:3000/categories/${id}`),
             }
         ],
     },

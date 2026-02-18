@@ -8,10 +8,11 @@ const useAds = (options = {}) => {
         categoryId = null,
         filters = {},
         enabled = true,
+        isMyAds = false,
         isFavorites = false
     } = options;
 
-    const {getAllAds, getCategoryAds,getFavorites} = useServerRequest();
+    const {getAllAds, getCategoryAds, getFavorites, getMyAds} = useServerRequest();
     const { user } = useContext(AuthContext);
 
     const [ads, setAds] = useState([]);
@@ -26,6 +27,8 @@ const useAds = (options = {}) => {
                 data = await getFavorites(user.id);
             } else if (categoryId) {
                 data = await getCategoryAds(categoryId);
+            } else if (isMyAds) {
+                data = await getMyAds(user);
             } else {
                 data = await getAllAds();
             }
@@ -33,6 +36,7 @@ const useAds = (options = {}) => {
             setAds(data);
         } catch (error) {
             setError(error.message || 'Ошибка загрузки');
+            console.error(error);
             setAds([]);
         } finally {
             setLoading(false);

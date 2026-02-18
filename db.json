@@ -165,6 +165,150 @@
       "images": [
         "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771246543/gyvrnsvfr94imfdf1e42.webp"
       ]
+    },
+    {
+      "id": "7e26",
+      "title": "WEBSITE",
+      "description": "EWEQWEQWEQWEQWEQWEQWE",
+      "price": 120,
+      "category": "Электроника",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771430693/p8l8gtehtay06ysexsjd.png"
+      ]
+    },
+    {
+      "id": "387b",
+      "title": "dsfsdfsdfsdfsdfsdf",
+      "description": "fsdfsdfsdfdsfsdfsdfsdf",
+      "price": 1231,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771430768/u7w5nh9k26uykkqjtnuh.png"
+      ]
+    },
+    {
+      "id": "3cf9",
+      "title": "dsfsdfsdfsdfsdfsdf",
+      "description": "fsdfsdfsdfdsfsdfsdfsdf",
+      "price": 1231,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771431108/mecwkozibwriieigw6od.png"
+      ]
+    },
+    {
+      "id": "08c2",
+      "title": "WEBSITE",
+      "description": "SRDEWRWEFDSFSDFSDFSDFDSF",
+      "price": 12,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771431363/uij6sxisupx9wd3xjmxx.png"
+      ]
+    },
+    {
+      "id": "9cfd",
+      "title": "WEBSITE",
+      "description": "SRDEWRWEFDSFSDFSDFSDFDSF",
+      "price": 12,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771431431/m32j8ayx2colfq8bpin4.png"
+      ]
+    },
+    {
+      "id": "8f4c",
+      "title": "АВВЫВЫАЫВ",
+      "description": "ВАЫАЫВАЫВАЫВАЫВАЫВАЫВА",
+      "price": 123,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771431812/xpt20j4ophs6fderjo8u.png"
+      ]
+    },
+    {
+      "id": "7fd9",
+      "title": "авыаываываы",
+      "description": "ваыываываываываываываыва",
+      "price": 100,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771431877/gqcgybyu83hg1ss82jkp.png"
+      ]
+    },
+    {
+      "id": "03e3",
+      "title": "еупавпвапвфапва",
+      "description": "пывапывапывапвыапвыавыыва",
+      "price": 132,
+      "category": "Транспорт",
+      "city": "Бричаны",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771431927/oict8o1jj9sz9pt60soa.png"
+      ]
+    },
+    {
+      "id": "ee00",
+      "title": "выфвфывфывф",
+      "description": "фывфывфывфывфывфывфывфыв",
+      "price": 12,
+      "category": "Электроника",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432613/pk6ajunjze0d4acqnk3l.png"
+      ]
+    },
+    {
+      "id": "b60f",
+      "title": "выфвфывфывф",
+      "description": "фывфывфывфывфывфывфывфыв",
+      "price": 12,
+      "category": "Электроника",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432613/pk6ajunjze0d4acqnk3l.png"
+      ]
+    },
+    {
+      "id": "8464",
+      "title": "3123123",
+      "description": "123123rfgadsgdfgsdfvbdaffv",
+      "price": 12321,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432656/qg5drq2nmgsqmu8ojuyv.png"
+      ]
+    },
+    {
+      "id": "3154",
+      "title": "3123123",
+      "description": "123123rfgadsgdfgsdfvbdaffv",
+      "price": 12321,
+      "category": "Транспорт",
+      "city": "Кишинёв",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432656/qg5drq2nmgsqmu8ojuyv.png"
+      ]
     }
   ],
   "categories": [
@@ -191,55 +335,22 @@
   ],
   "users": [
     {
-      "id": "da8d",
-      "name": "Jony",
-      "email": "test@test.com",
-      "password": "1111",
-      "role": "user",
-      "city": "",
-      "favorites": [
-        "1",
-        "2",
-        "5ede",
-        "3d39"
-      ]
-    },
-    {
-      "id": "19c5",
-      "name": "Ionut",
-      "email": "ionut@admin.com",
-      "password": "0000",
-      "role": "user",
-      "city": "",
-      "favorites": [
-        "1",
-        "1fb3",
-        "2",
-        "4071",
-        "3"
-      ]
-    },
-    {
       "id": "5ec5",
       "name": "Jony",
       "email": "jony@jony.com",
       "password": "Admin123",
       "role": "user",
       "city": "",
+      "ads": [
+        "03e3",
+        "3154"
+      ],
       "favorites": [
         "3",
         "3d39",
         "5ede",
-        "5cf4",
         "2"
       ]
-    }
-  ],
-  "favorites": [
-    {
-      "id": "1",
-      "userId": 2,
-      "adId": 2
     }
   ]
 }
