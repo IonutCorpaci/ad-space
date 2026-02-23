@@ -18,6 +18,7 @@ import AdErrorPage from "./pages/AdErrorPage.jsx";
 import requireAuth from "./utils/authGuard.js";
 import {createLoader} from "./utils/createLoader.js";
 import MyAdsPage from "./pages/MyAdsPage.jsx";
+import EditAd from "./pages/EditAd.jsx";
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,17 @@ const router = createBrowserRouter([
                 path: "my-ads",
                 element: <MyAdsPage/>,
                 loader: requireAuth,
+            },
+            {
+                path: "edit/:id",
+                element: <EditAd/>,
+                loader: async ({ params }) => {
+                    const auth = requireAuth();
+                    if (auth instanceof Response) return auth;
+
+                    const adLoader = createLoader(({ id }) => `http://localhost:3000/ads/${id}`);
+                    return adLoader({ params });
+                },
             },
             {
                 path: "ads/:id",

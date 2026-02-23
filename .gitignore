@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+ASSESSMENT_AND_INTENSIVE_PLAN.md
+CODE_REVIEW_AND_ROADMAP.md
+LEARNING_GUIDE.md
+USEEFFECT_EXPLANATION.md
 
 # Editor directories and files
 .vscode/*

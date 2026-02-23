@@ -275,18 +275,6 @@
       ]
     },
     {
-      "id": "b60f",
-      "title": "выфвфывфывф",
-      "description": "фывфывфывфывфывфывфывфыв",
-      "price": 12,
-      "category": "Электроника",
-      "city": "Кишинёв",
-      "userId": "5ec5",
-      "images": [
-        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432613/pk6ajunjze0d4acqnk3l.png"
-      ]
-    },
-    {
       "id": "8464",
       "title": "3123123",
       "description": "123123rfgadsgdfgsdfvbdaffv",
@@ -299,15 +287,15 @@
       ]
     },
     {
-      "id": "3154",
-      "title": "3123123",
-      "description": "123123rfgadsgdfgsdfvbdaffv",
-      "price": 12321,
+      "id": "9656",
+      "title": "test",
+      "description": "testtesttesttesttesttesttesttest",
+      "price": 100,
       "category": "Транспорт",
       "city": "Кишинёв",
       "userId": "5ec5",
       "images": [
-        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432656/qg5drq2nmgsqmu8ojuyv.png"
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771688659/samd2tk860zxigdbmwvh.png"
       ]
     }
   ],
@@ -343,13 +331,18 @@
       "city": "",
       "ads": [
         "03e3",
-        "3154"
+        "3154",
+        "4e56",
+        "65b5",
+        "fcd9"
       ],
       "favorites": [
         "3",
         "3d39",
         "5ede",
-        "2"
+        "2",
+        "65b5",
+        "03e3"
       ]
     }
   ]

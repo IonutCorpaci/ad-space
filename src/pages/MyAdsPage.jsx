@@ -20,7 +20,7 @@ const MyAdsPage = () => {
                             <p className="text-gray-500 text-lg">У вас нету своих обьявлений. <Link to={'/create-ad'} className="text-blue-500 cursor-pointer">Хотите создать?</Link></p>
                         </div>
                     )
-                    : <AdsList ads={ads} />
+                    : <AdsList ads={ads} isMy={true}/>
 
             )}
         </div>

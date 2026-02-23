@@ -42,7 +42,7 @@ const useAds = (options = {}) => {
             setLoading(false);
         }
 
-    }, [categoryId, isFavorites, user?.id]);
+    }, [categoryId, isFavorites, getMyAds, getAllAds, getFavorites, user, isMyAds, getCategoryAds]);
 
     useEffect(() => {
         if (enabled) {

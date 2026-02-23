@@ -12,7 +12,7 @@ const useServerRequest = () => {
     const getAd = useCallback(async (id) => {
         const res = await axios.get(`${_apiBase}/ads/${id}`);
         return res.data;
-    }, [])
+    }, []);
 
     const getAllAds = useCallback(async () => {
         const res = await axios.get(`${_apiBase}/ads`);
@@ -70,6 +70,14 @@ const useServerRequest = () => {
         return response.data.id;  // Возвращаем только ID
     }, [])
 
+    const editAd = useCallback(async (id, data) => {
+        await axios.patch(`${_apiBase}/ads/${id}`, data);
+    }, [])
+
+    const deleteAd = useCallback(async (id) => {
+        await axios.delete(`${_apiBase}/ads/${id}`);
+    }, [])
+
 
     return {
         getAllAds,
@@ -79,6 +87,8 @@ const useServerRequest = () => {
         changeFavorite,
         getUser,
         createAd,
+        editAd,
+        deleteAd,
         getAd,
         getSearchAds,
         getMyAds,

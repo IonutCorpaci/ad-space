@@ -1,15 +1,16 @@
+import {useLoaderData, useNavigate} from "react-router";
 import {useContext, useState} from "react";
-import {uploadToCloudinary} from "../utils/UploadToClodinary.jsx";
-import {AuthContext} from "../context/Auth/AuthContext.jsx";
-import {useNavigate} from "react-router";
-import useServerRequest from "../api/ServerRequest.jsx";
-import toast from "react-hot-toast";
 import AdForm from "../components/AdForm.jsx";
+import {AuthContext} from "../context/Auth/AuthContext.jsx";
+import useServerRequest from "../api/ServerRequest.jsx";
+import {uploadToCloudinary} from "../utils/UploadToClodinary.jsx";
+import toast from "react-hot-toast";
 
-const CreateAd = () => {
+const EditAd = () => {
+    const ad = useLoaderData();
     const [loading, setLoading] = useState(false);
-    const {user, addUserAd} = useContext(AuthContext);
-    const {createAd} = useServerRequest();
+    const {user} = useContext(AuthContext);
+    const {editAd} = useServerRequest();
 
     const navigate = useNavigate();
 
@@ -18,17 +19,19 @@ const CreateAd = () => {
         setLoading(true);
 
         try {
-            // In create flow: upload only files and include any non-file previews if present
-            const existingPreviews = (uploadedImages || []).filter(img => !img.file).map(img => img.preview);
+            const existingUrls = (uploadedImages || [])
+                .filter(img => !img.file)
+                .map(img => img.preview);
+
             const newFiles = (uploadedImages || []).filter(img => img.file);
 
-            const uploadedUrls = [...existingPreviews];
+            const uploadedUrls = [...existingUrls];
             for (const img of newFiles) {
                 const url = await uploadToCloudinary(img.file);
                 uploadedUrls.push(url);
             }
 
-            const ad = {
+            const editedAd = {
                 title: data.title,
                 description: data.description,
                 price: data.price,
@@ -38,8 +41,7 @@ const CreateAd = () => {
                 images: uploadedUrls,
             };
 
-            const adId = await createAd(ad);
-            await addUserAd(adId);
+            await editAd(ad.id, editedAd);
             navigate("/");
         } catch (error) {
             const message =
@@ -55,11 +57,11 @@ const CreateAd = () => {
 
     return (
         <div className="container mx-auto mt-10">
-            <h1 className="text-5xl">Создать объявление</h1>
+            <h1 className="text-5xl">Редатктирование объявления</h1>
 
-            <AdForm mode="create" data={{}} handleSubmitForm={handleSubmitForm} loading={loading}/>
+            <AdForm mode="edit" data={ad} handleSubmitForm={handleSubmitForm} loading={loading}/>
         </div>
-    );
+    )
 }
 
-export default CreateAd;
+export default EditAd;

@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { AuthContext } from "./AuthContext.jsx";
 import useServerRequest from "../../api/ServerRequest.jsx";
+import toast from "react-hot-toast";
 
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const {getUser, changeFavorite, addAdToUser} = useServerRequest();
+    const {getUser, changeFavorite, addAdToUser, deleteAd} = useServerRequest();
 
     useEffect(() => {
         const userObj = localStorage.getItem("user");
@@ -77,9 +78,21 @@ export const AuthProvider = ({ children }) => {
             changeFavorite(user.id, {favorites: updatedFavorites})
                 .then(res => setUser(res));
         } catch (err) {
-            console.log("Ошибка обновления избранного", err);
+            toast.error("Ошибка обновления избранного", err);
         }
     };
+
+    const onDeleteAd = async (adId) => {
+        if (!user) return;
+        const updatedAds = user.ads.filter(id => id !== adId);
+
+        try {
+            await deleteAd(adId)
+            setUser({...user, ads: updatedAds});
+        } catch (err) {
+            toast.error(`Ошибка: Не удалось удалить. ${err.message}`)
+        }
+    }
 
     const addUserAd = async (adId) => {
         if (!user) return;
@@ -96,7 +109,7 @@ export const AuthProvider = ({ children }) => {
 
 
     return (
-        <AuthContext.Provider value={{ user, setUser, loading, login, registerUser, logout, toggleFavorite, addUserAd }}>
+        <AuthContext.Provider value={{ user, setUser, loading, login, registerUser, logout, toggleFavorite, addUserAd, onDeleteAd}}>
             {children}
         </AuthContext.Provider>
     );

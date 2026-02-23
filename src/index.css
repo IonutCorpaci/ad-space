@@ -56,6 +56,14 @@
     content: "\e9d9";
 }
 
+._icon-pencil:before {
+    content: "\e905";
+}
+
+._icon-cancel-circle:before {
+    content: "\ea0d";
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
