@@ -7,7 +7,8 @@ import useServerRequest from "../api/ServerRequest.jsx";
 
 const AdForm = ({mode, data, handleSubmitForm, loading}) => {
     const [categories, setCategories] = useState([]);
-    const {getAllCategories} = useServerRequest();
+    const [cities, setCities] = useState([]);
+    const {getAllCategories, getAllCities} = useServerRequest();
 
     const {
         register,
@@ -46,6 +47,16 @@ const AdForm = ({mode, data, handleSubmitForm, loading}) => {
                 }
             })
             .catch(error => toast.error(`Ошибка загрузки категорий: ${error}`));
+
+        getAllCities()
+            .then(items => {
+                setCities(items);
+                if (mode === "edit") {
+                    setTimeout(() => {
+                        setValue("city", data.city);
+                    }, 0);
+                }
+            }).catch(error => toast.error(`Ошибка загрузки городов: ${error}`));
     }, [])
 
     useEffect(() => {
@@ -191,8 +202,9 @@ const AdForm = ({mode, data, handleSubmitForm, loading}) => {
                         {...register("city")}
                     >
                         <option value="">Выберите город</option>
-                        <option value="Кишинёв">Кишинёв</option>
-                        <option value="Бричаны">Бричаны</option>
+                        {cities.map((city) => (
+                            <option key={city.id} value={city.name}>{city.name}</option>
+                        ))}
                     </select>
                     {errors.city && (
                         <span className="text-red-600">{errors.city.message}</span>

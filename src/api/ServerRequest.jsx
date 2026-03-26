@@ -24,6 +24,11 @@ const useServerRequest = () => {
         return res.data;
     }, [])
 
+    const getAllCities = useCallback(async () => {
+        const res = await axios.get(`${_apiBase}/cities`);
+        return res.data;
+    },[]);
+
     const getAllCategories = useCallback(async () => {
         const res = await axios.get(`${_apiBase}/categories`);
         return res.data;
@@ -82,6 +87,7 @@ const useServerRequest = () => {
     return {
         getAllAds,
         getCategoryAds,
+        getAllCities,
         getAllCategories,
         getFavorites,
         changeFavorite,
