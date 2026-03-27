@@ -1,20 +1,14 @@
-import './skeleton.scss';
-
 const Skeleton = () => {
     return (
-        <>
-            <p className="char__select">Please select a character to see information</p>
-            <div className="skeleton">
-                <div className="pulse skeleton__header">
-                    <div className="pulse skeleton__circle"></div>
-                    <div className="pulse skeleton__mini"></div>
-                </div>
-                <div className="pulse skeleton__block"></div>
-                <div className="pulse skeleton__block"></div>
-                <div className="pulse skeleton__block"></div>
-            </div>
-        </>
-    )
-}
+        <li className="animate-pulse">
+            {/* Изображение */}
+            <div className="h-45 md:h-70 xl:h-60 bg-gray-200 rounded-lg"></div>
+            {/* Название */}
+            <div className="h-5 bg-gray-200 rounded mt-2 w-3/4"></div>
+            {/* Цена */}
+            <div className="h-4 bg-gray-200 rounded mt-2 w-1/4"></div>
+        </li>
+    );
+};
 
 export default Skeleton;

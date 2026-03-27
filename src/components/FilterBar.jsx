@@ -12,7 +12,7 @@ const FilterBar = ({cities, city, setCity, minPrice, maxPrice, setMinPrice, setM
                         className="border border-gray-300 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 bg-white">
                         <option value="">Все города</option>
                         {cities.map((city) => (
-                            <option key={city.id} value={city.id}>{city.name}</option>
+                            <option key={city.id} value={city.name}>{city.name}</option>
                         ))}
                     </select>
                 </div>

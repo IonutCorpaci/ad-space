@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const {getUser, changeFavorite, addAdToUser, deleteAd} = useServerRequest();
+    const {getUser, changeFavorite, addAdToUser, deleteAd, updateUser} = useServerRequest();
 
     useEffect(() => {
         const userObj = localStorage.getItem("user");
@@ -52,6 +52,7 @@ export const AuthProvider = ({ children }) => {
             password,
             role: "user",
             city: "",
+            phone: "",
             ads: [],
             favorites: []
         });
@@ -107,9 +108,20 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const onUpdateUser = async (id, data) => {
+        if (!user) return;
+
+        try {
+            const res = await updateUser(id, data);
+            setUser(res);
+        } catch (err) {
+            console.log("Ошибка добавления объявления", err);
+        }
+    }
+
 
     return (
-        <AuthContext.Provider value={{ user, setUser, loading, login, registerUser, logout, toggleFavorite, addUserAd, onDeleteAd}}>
+        <AuthContext.Provider value={{ user, setUser, loading, login, registerUser, logout, toggleFavorite, onUpdateUser, addUserAd, onDeleteAd}}>
             {children}
         </AuthContext.Provider>
     );

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {getCloudinaryUrl} from "../utils/getCloudinaryUrl.js";
 import {Swiper} from "swiper/react";
 import {SwiperSlide} from "swiper/react";
 import 'swiper/css';
@@ -71,10 +72,11 @@ const Ad = () => {
                                                 <span className="text-gray-500">Изображение не загружено</span>
                                             </div>
                                         ) : (
-                                            <img 
-                                                src={img} 
+                                            <img
+                                                src={getCloudinaryUrl(img, { width: 1200, quality: 'auto' })}
                                                 alt={`${ad.title} - изображение ${i + 1}`}
                                                 className="w-full h-full object-cover rounded-lg"
+                                                loading="lazy"
                                                 onError={() => handleImageError(i)}
                                             />
                                         )}
@@ -98,10 +100,11 @@ const Ad = () => {
                                                     <span className="text-xs text-gray-500">Ошибка</span>
                                                 </div>
                                             ) : (
-                                                <img 
-                                                    src={img} 
+                                                <img
+                                                    src={getCloudinaryUrl(img, { width: 150, height: 80 })}
                                                     alt={`${ad.title} - миниатюра ${i + 1}`}
                                                     className="w-full h-full object-cover rounded-lg cursor-pointer opacity-70 hover:opacity-100 transition"
+                                                    loading="lazy"
                                                     onError={() => handleImageError(i)}
                                                 />
                                             )}

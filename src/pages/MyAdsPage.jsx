@@ -1,6 +1,6 @@
 import AdsList from "../layouts/AdsList.jsx";
 import useAds from "../hooks/useAds.jsx";
-import Loading from "../components/Loading.jsx";
+import Skeleton from "../components/Skeleton/Skeleton.jsx";
 import ErrorMessage from "../components/ErrorMessage/errorMessage.jsx";
 import {Link} from "react-router";
 
@@ -11,7 +11,11 @@ const MyAdsPage = () => {
     return (
         <div className="container mx-auto px-4">
             <h1 className="text-2xl md:text-3xl mb-4">Мои обьявления</h1>
-            {loading && <Loading message="Загрузка объявлений..." />}
+            {loading && (
+                <ul className="grid grid-cols-2 gap-4 xl:grid-cols-3 2xl:grid-cols-4 md:gap-6">
+                    {Array(4).fill(null).map((_, i) => <Skeleton key={i} />)}
+                </ul>
+            )}
             {error && <ErrorMessage />}
             {!loading && !error && (
                 ads.length === 0

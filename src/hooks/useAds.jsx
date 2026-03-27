@@ -20,6 +20,7 @@ const useAds = (options = {}) => {
     const [error, setError] = useState(null);
 
     const fetchAds = useCallback(async () => {
+        setLoading(true);
         try {
             let data;
 

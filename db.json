@@ -275,18 +275,6 @@
       ]
     },
     {
-      "id": "8464",
-      "title": "3123123",
-      "description": "123123rfgadsgdfgsdfvbdaffv",
-      "price": 12321,
-      "category": "Транспорт",
-      "city": "Кишинёв",
-      "userId": "5ec5",
-      "images": [
-        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771432656/qg5drq2nmgsqmu8ojuyv.png"
-      ]
-    },
-    {
       "id": "9656",
       "title": "test",
       "description": "testtesttesttesttesttesttesttest",
@@ -296,6 +284,18 @@
       "userId": "5ec5",
       "images": [
         "https://res.cloudinary.com/dt6sy90a2/image/upload/v1771688659/samd2tk860zxigdbmwvh.png"
+      ]
+    },
+    {
+      "id": "771c",
+      "title": "Мебель",
+      "description": "МебельМебельМебельМебельМебельМебельМебельМебель",
+      "price": 1200,
+      "category": "Недвижимость",
+      "city": "Бричаны",
+      "userId": "5ec5",
+      "images": [
+        "https://res.cloudinary.com/dt6sy90a2/image/upload/v1774561563/yqmhgnlusxedkm2pwbqm.png"
       ]
     }
   ],
@@ -323,19 +323,24 @@
   ],
   "cities": [
     {
-      "name": "Кишинёв"
+      "name": "Кишинёв",
+      "id": "36db"
     },
     {
-      "name": "Бричаны"
+      "name": "Бричаны",
+      "id": "ad07"
     },
     {
-      "name": "Единцы"
+      "name": "Единцы",
+      "id": "7a58"
     },
     {
-      "name": "Бельц"
+      "name": "Бельц",
+      "id": "e71e"
     },
     {
-      "name": "Комрат"
+      "name": "Комрат",
+      "id": "cb12"
     }
   ],
   "users": [
@@ -345,16 +350,20 @@
       "email": "jony@jony.com",
       "password": "Admin123",
       "role": "user",
-      "city": "",
+      "phone": "0600000000",
+      "city": "Единцы",
       "ads": [
-        "03e3",
-        "3154",
-        "4e56",
-        "65b5",
-        "fcd9"
+        "771c",
+        "9656",
+        "8464",
+        "ee00",
+        "7fd9",
+        "8f4c"
       ],
       "favorites": [
-        "65b5"
+        "65b5",
+        "1",
+        "2"
       ]
     }
   ]

@@ -56,7 +56,7 @@ const EditAd = () => {
     }
 
     return (
-        <div className="container mx-auto mt-10">
+        <div className="container mx-auto px-4 mt-10">
             <h1 className="text-5xl">Редатктирование объявления</h1>
 
             <AdForm mode="edit" data={ad} handleSubmitForm={handleSubmitForm} loading={loading}/>

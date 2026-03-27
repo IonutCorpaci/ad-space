@@ -1,7 +1,7 @@
 import {useLoaderData} from "react-router";
 import useAds from "../hooks/useAds.jsx";
 import AdsList from "../layouts/AdsList.jsx";
-import Loading from "../components/Loading.jsx";
+import Skeleton from "../components/Skeleton/Skeleton.jsx";
 import ErrorMessage from "../components/ErrorMessage/errorMessage.jsx";
 import FilterBar from "../components/FilterBar.jsx";
 import {useEffect, useMemo, useState} from "react";
@@ -77,7 +77,11 @@ const CategoryAds = () => {
     }
 
     const items = renderAds(filteredAds);
-    const spinner = loading ? <Loading message="Загрузка объявлений..." /> : null;
+    const spinner = loading ? (
+        <ul className="grid grid-cols-2 gap-4 xl:grid-cols-3 2xl:grid-cols-4 md:gap-6">
+            {Array(8).fill(null).map((_, i) => <Skeleton key={i} />)}
+        </ul>
+    ) : null;
     const errorMessage = error ? <ErrorMessage /> : null;
 
 

@@ -83,6 +83,11 @@ const useServerRequest = () => {
         await axios.delete(`${_apiBase}/ads/${id}`);
     }, [])
 
+    const updateUser = useCallback(async (id, data) => {
+        const res = await axios.patch(`${_apiBase}/users/${id}`, data);
+        return res.data;
+    },[])
+
 
     return {
         getAllAds,
@@ -95,6 +100,7 @@ const useServerRequest = () => {
         createAd,
         editAd,
         deleteAd,
+        updateUser,
         getAd,
         getSearchAds,
         getMyAds,
