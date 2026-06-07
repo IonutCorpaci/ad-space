@@ -9,7 +9,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import {AuthProvider} from "./context/Auth/AuthProvider.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
-import CreateAd from "./pages/create-ad.jsx";
+import CreateAd from "./pages/CreateAd.jsx";
 import CategoriesProvider from "./context/Categories/CategoriesProvider.jsx";
 import FavoritesPage from "./pages/FavoritesPage.jsx";
 import {FavoritesProvider} from "./context/Favorites/FavoritesProvider.jsx";

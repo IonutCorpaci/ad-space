@@ -14,7 +14,7 @@ const AdCard = memo((props) => {
     return (
         <li className="relative group cursor-pointer">
 
-            <nav className="absolute right-2 top-2 hidden group-hover:flex">
+            <nav className="absolute right-2 top-2 flex group-hover:flex md:hidden">
                 {isMy && (
                     <>
                         <button className="bg-red-300 rounded flex items-center justify-center p-1 mr-2 cursor-pointer" onClick={() => onDeleteAd(id)}>
@@ -36,8 +36,8 @@ const AdCard = memo((props) => {
                 images.length === 0 ? <Link to={`/ads/${id}`} className="h-45 md:h-70 xl:h-60 bg-blue-950 rounded-lg block"></Link> : <Link to={`/ads/${id}`} className="h-45 md:h-70 xl:h-60 rounded-lg block">
                     <img src={getCloudinaryUrl(images[0], { width: 400, height: 300 })} alt="image" className="w-full h-full object-cover rounded-lg" loading="lazy"/></Link>
             }
-            <div className="name text-lg font-medium mt-1">{title}</div>
-            <div className="price font-semibold mt-1">{price}$</div>
+            <div className="name text-sm font-medium mt-1 md:text-lg">{title}</div>
+            <div className="price font-semibold mt-1 md:text-lg">{price}$</div>
         </li>
     )
 })

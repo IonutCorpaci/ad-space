@@ -60,4 +60,10 @@ const useAds = (options = {}) => {
     };
 }
 
+function makeGreeter(name) {
+    return function () {
+        console.log("Привет" + name);
+    }
+}
+
 export default useAds;

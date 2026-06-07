@@ -11,9 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
-ASSESSMENT_AND_INTENSIVE_PLAN.md
-CODE_REVIEW_AND_ROADMAP.md
-LEARNING_GUIDE.md
+plans/ASSESSMENT_AND_INTENSIVE_PLAN.md
+plans/CODE_REVIEW_AND_ROADMAP.md
+plans/LEARNING_GUIDE.md
 USEEFFECT_EXPLANATION.md
 
 # Editor directories and files
@@ -26,5 +26,5 @@ USEEFFECT_EXPLANATION.md
 *.njsproj
 *.sln
 *.sw?
-/OPTIMIZATION_REPORT.md
+/plans/OPTIMIZATION_REPORT.md
 CLAUDE.md

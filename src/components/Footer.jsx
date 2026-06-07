@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="fixed bottom-0 w-full py-4 px-6 bg-white inset-shadow-xs block md:hidden">
                 <ul className="text-xl flex items-center justify-between gap-4">
                     <li className="text-4xl w-10 flex items-center justify-center"><Link to="/"><span className="_icon-home"></span></Link></li>
-                    <li className="text-4xl w-10 flex items-center justify-center"><Link to="/messages"><span className="_icon-bubbles"></span></Link></li>
+                    <li className="text-4xl w-10 flex items-center justify-center"><a href="#"><span className="_icon-bubbles"></span></a></li>
                     <li className="w-10 h-10 bg-blue-800 rounded-full text-4xl text-white flex items-center justify-center"><Link to="/create-ad">+</Link></li>
                     <li className="text-4xl w-10 flex items-center justify-center"><Link to="/favorites"><span className="_icon-star-empty"></span></Link></li>
                     <li className="text-5xl w-10 flex items-center justify-center"><Link to="/profile"><span className="_icon-user"></span></Link></li>

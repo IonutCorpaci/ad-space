@@ -1,9 +1,9 @@
-import {useContext, useRef} from "react";
+import {memo, useContext, useRef} from "react";
 import {CategoriesContext} from "../context/Categories/CategoriesContext.jsx";
 import {Link} from "react-router";
 // import useClickOutside from "../hooks/useClickOutside.jsx";
 
-const Categories = ({showCategories, toggleCategories}) => {
+const Categories = memo(({showCategories, toggleCategories}) => {
 
     const { categories } = useContext(CategoriesContext);
     const categoriesRef = useRef(null);
@@ -22,6 +22,6 @@ const Categories = ({showCategories, toggleCategories}) => {
             </ul>
         </div>
     )
-}
+})
 
 export default Categories
